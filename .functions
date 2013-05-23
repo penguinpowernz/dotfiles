@@ -46,4 +46,7 @@ agu() {
 }
 
 
-
+# Git stuff
+gclo() {
+  git clone $*;
+}
