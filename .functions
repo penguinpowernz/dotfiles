@@ -8,7 +8,7 @@ rcheck() {
   find . -name \*.rb -exec ruby -c {} \;
 }
 
-susvc() {
+svc() {
   sudo service $*;
 }
 
@@ -38,4 +38,9 @@ ags() {
 
 agp() {
   apt-file search $*
+}
+
+agu() {
+  apt-get update;
+  apt-file update;
 }
