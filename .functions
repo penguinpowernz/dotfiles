@@ -41,14 +41,9 @@ agp() {
 }
 
 agu() {
-  apt-get update;
-  apt-file update;
+  sudo apt-get update;
+  sudo apt-file update;
 }
 
 
-# Git stuff
-glo() {
-  # This overwrites zsh's glo function
-  git pull origin $*
-}
 
