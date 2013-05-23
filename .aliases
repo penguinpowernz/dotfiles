@@ -1,0 +1,3 @@
+alias l="ls -la";
+alias what="netstat -tulpn 2> /dev/null"
+alias wat="netstat -tulp 2> /dev/null"
