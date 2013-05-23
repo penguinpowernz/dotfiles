@@ -1,0 +1,29 @@
+## HTML
+include "~/.nano/html.nanorc"
+
+## Patch files
+include "~/.nano/patch.nanorc"
+
+## Perl
+include "~/.nano/perl.nanorc"
+
+## Python
+include "~/.nano/python.nanorc"
+
+## Ruby
+include "~/.nano/ruby.nanorc"
+
+## Bourne shell scripts
+include "~/.nano/sh.nanorc"
+
+## CSS
+include "~/.nano/css.nanorc"
+
+## php
+include "~/.nano/php.nanorc"
+
+## XML
+include "~/.nano/xml.nanorc"
+
+## Lua
+include "~/.nano/lua.nanorc"
