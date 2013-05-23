@@ -5,6 +5,8 @@ My personal dotfiles
 
 ## Requirements
 
+This stuff is written for a Debian 7 system.  Hopefully it'll work on yours too.
+
 * netstat (net-tools)
 * rsync
 * apt-file
