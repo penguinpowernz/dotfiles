@@ -17,7 +17,7 @@ This stuff is written for a Debian 7 system.  Hopefully it'll work on yours too.
 
 Run `./install.sh`
 
-## How to use
+## Terminal Shortcuts
 
 Keep development stuff in `$HOME/src` then do `hax thing` to jump into `$HOME/src/thing` (thing is a wildcard).
 
