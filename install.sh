@@ -13,4 +13,4 @@ fi;
 THIS=`readlink -e $0`;
 FROM=`dirname $THIS`;
 
-rsync -rav $FROM/ $HOME --exclude=".git" --exclude="README.md" --exclude="install.sh";
+rsync -rav $FROM/ $HOME --exclude=".git" --exclude="README.md" --exclude="install.sh" --exclude=".gitmodules";
