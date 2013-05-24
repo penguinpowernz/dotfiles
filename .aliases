@@ -14,3 +14,4 @@ alias wfs="python -m SimpleHTTPServer 8888"
 alias e="$EDITOR"
 alias st="sublimetext2"
 alias sanscom="grep -Pv '^#'"
+alias bed='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
