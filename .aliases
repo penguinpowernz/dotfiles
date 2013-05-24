@@ -3,3 +3,6 @@ alias what="netstat -tulpn 2> /dev/null"
 alias wat="netstat -tulp 2> /dev/null"
 alias glg='git log --pretty=format:"%h : %ar : %s"'
 alias gfo="git fetch origin"
+alias gri="git rebase -i"
+alias gtfo="sudo shutdown -h now"
+alias reboot="sudo reboot"
