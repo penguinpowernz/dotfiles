@@ -50,3 +50,25 @@ agu() {
 gclo() {
   git clone $*;
 }
+
+
+# Log a command
+function logit() {
+    local to_file="$1"
+    shift
+    if [ -z "$to_file" ]; then
+        echo "Need a file to log to." 2>&1
+        return 1
+    elif [ -z "$*" ]; then
+        echo "Need a command to run." 2>&1
+        return 1
+    fi
+
+    echo "DATE: $(date)" > "$to_file"
+    echo "DIR: $(pwd)" >> "$to_file"
+    echo "CMD: $*" >> "$to_file"
+    echo "OUTPUT:" >> "$to_file"
+    echo >> $to_file
+    eval "$@ 2>&1 | tee -a '$to_file'"
+    return $?
+}
