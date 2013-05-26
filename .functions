@@ -51,6 +51,17 @@ gclo() {
   git clone $*;
 }
 
+# GIT PULL CURRENT BRANCH
+glb() {
+  CB=`git branch |tr -d '* '`;
+  git pull origin $CB;
+}
+
+# GIT PUSH CURRENT BRANCH
+gpb() {
+  CB=`git branch |tr -d '* '`;
+  git push origin $CB;
+}
 
 # Log a command
 function logit() {
