@@ -53,13 +53,13 @@ gclo() {
 
 # GIT PULL CURRENT BRANCH
 glb() {
-  CB=`git branch |tr -d '* '`;
+  CB=`git branch |grep "\*" |tr -d '* '`;
   git pull origin $CB;
 }
 
 # GIT PUSH CURRENT BRANCH
 gpb() {
-  CB=`git branch |tr -d '* '`;
+  CB=`git branch |grep "\*" |tr -d '* '`;
   git push origin $CB;
 }
 
