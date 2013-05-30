@@ -3,7 +3,7 @@
 echo -n "Install into $HOME? [Y/n]: ";
 read INSTALL;
 
-if [ "$INSTALL" = "" ] || [ "$(grep -i y $INSTALL|wc -l)" = "1" ]; then
+if [ "$INSTALL" = "" ] || [ "$(echo $INSTALL|grep -i y|wc -l)" = "1" ]; then
   echo "Installing...";
 else
   echo "Not installing.";
