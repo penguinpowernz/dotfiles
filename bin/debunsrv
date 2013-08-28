@@ -1,0 +1,5 @@
+#!/bin/bash
+
+DEB="$(echo $1|cut -d'_' -f1)";
+
+sudo reprepro -Vb /srv/reprepro remove multi $DEB;

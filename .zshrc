@@ -58,6 +58,6 @@ source ~/.aliases
 
 # RVM stuff
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source /home/hamstar/.rvm/scripts/rvm
+source $HOME/.rvm/scripts/rvm
 
 export EDITOR=`which nano`;

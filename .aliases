@@ -1,21 +1,39 @@
 alias l="ls -lah"
 alias ll="ls -lh"
+alias s="sudo"
+
 alias what="netstat -tulpn 2> /dev/null"
 alias wat="netstat -tulp 2> /dev/null"
+
 alias glg='git log --pretty=format:"%h : %ar : %s"'
 alias gfo="git fetch origin"
 alias gri="git rebase -i"
 alias gmn="git merge --no-ff"
 alias gt="git tag"
+
 alias deb="dpkg-deb -b"
+alias dgb="dpkg-git -b"
+
 alias gtfo="sudo shutdown -h now"
 alias reboot="sudo reboot"
+alias bed='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
+
 alias du="du -h"
 alias duf="du -h --max-depth=1"
 alias dug="du -ks --exclude=.git "
 alias df="df -h"
+
 alias wfs="python -m SimpleHTTPServer 8888"
 alias e="$EDITOR"
 alias st="sublimetext2"
 alias sanscom="grep -Pv '^#'"
-alias bed='dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend'
+
+alias rgm='rails g migration'
+alias rgmo='rails g model'
+alias rgc='rails g controller'
+alias rgs='rails g scaffold'
+alias rdbm='rake db:migrate'
+
+alias aslv="grep 'Version:' asl-* -R 2>/dev/null|grep DEBIAN|tr -s '/' ':'|cut -d':' -f1,5|column -t"
+
+alias scroff="sleep 1 && xset dpms force off"

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# echo -n "Create deb in "`pwd`"? [Y/n]: ";
+# read CONTINUE;
+
+# if [ "$(echo $CONTINUE|grep -i 'y'|wc -l)" = "" ]
+
+if [ -d "DEBIAN" ]; then
+	echo "This is already a Debian package, exiting...";
+	exit 1;
+fi;
+
+mkdir DEBIAN
+
+cat << EOF > DEBIAN/control
+Package: 
+Version: 
+Section: misc
+Priority: optional
+Architecture: all
+Essential: no
+Depends: 
+Installed-Size: 0
+Maintainer: Robert McLeod <robert@autogrow.com>
+Homepage: <none>
+Description: stuff
+  more stuff
+EOF
+
+touch DEBIAN/postinst
+
+chmod 755 DEBIAN -R
