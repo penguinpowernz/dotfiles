@@ -1,3 +1,4 @@
+alias c="cd"
 alias l="ls -lah"
 alias ll="ls -lh"
 alias s="sudo"
@@ -6,10 +7,12 @@ alias what="netstat -tulpn 2> /dev/null"
 alias wat="netstat -tulp 2> /dev/null"
 
 alias glg='git log --pretty=format:"%h : %ar : %s"'
+alias glv="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate"
 alias gfo="git fetch origin"
-alias gri="git rebase -i"
 alias gmn="git merge --no-ff"
 alias gt="git tag"
+alias gpt="git push --tags"
+alias gpa="git push --all"
 
 alias deb="dpkg-deb -b"
 alias dgb="dpkg-git -b"
@@ -33,6 +36,7 @@ alias rgmo='rails g model'
 alias rgc='rails g controller'
 alias rgs='rails g scaffold'
 alias rdbm='rake db:migrate'
+alias rdbmt='RAILS_ENV=test rake db:migrate'
 
 alias aslv="grep 'Version:' asl-* -R 2>/dev/null|grep DEBIAN|tr -s '/' ':'|cut -d':' -f1,5|column -t"
 
