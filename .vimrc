@@ -20,3 +20,5 @@ Bundle 'kien/ctrlp.vim.git'
 
 map <leader>[ :NERDTreeToggle<CR>
 map <leader>{ :NERDTreeFind<CR>
+
+syntax on
