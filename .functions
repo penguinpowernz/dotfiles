@@ -83,3 +83,9 @@ function logit() {
     eval "$@ 2>&1 | tee -a '$to_file'"
     return $?
 }
+
+
+epoch() {
+  [ "$1" ] && date -d @$1 && return 0;
+  date +%s
+}
