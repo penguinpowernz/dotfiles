@@ -14,12 +14,24 @@ svc() {
 
 hax() {
 
+  goto="$HOME/src"
+
   if [ "$1" = "" ]; then
-cd "$HOME/src";
+    cd "$goto";
     return;
   fi;
 
-  cd `find "$HOME/src" -maxdepth 1 -name "*${1}*" -type d|sort|head -1`;
+  if [ "$2" ]; then
+    goto="$goto/$2";
+  fi;
+
+  cd `find "$goto" -maxdepth 1 -name "*${1}*" -type d|sort|head -1`;
+}
+
+haxd() {
+
+  hax $1 debs
+
 }
 
 # Shows all the SSH connections both out (ssh) and in (sshd)
