@@ -11,6 +11,7 @@ alias glv="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d
 alias gfo="git fetch origin"
 alias gmn="git merge --no-ff"
 alias gt="git tag"
+alias gfa="git fetch --all"
 alias gpt="git push --tags"
 alias gpa="git push --all"
 
