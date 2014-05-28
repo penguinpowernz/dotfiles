@@ -37,16 +37,36 @@ alias rgm='rails g migration'
 alias rgmo='rails g model'
 alias rgc='rails g controller'
 alias rgs='rails g scaffold'
+alias rdm='rails d migration'
+alias rdmo='rails d model'
+alias rdc='rails d controller'
+alias rds='rails d scaffold'
+
+# rake db ops
 alias rdbm='rake db:migrate'
+alias rdbd='rake db:drop'
+alias rdbc='rake db:create'
 alias rdbmt='RAILS_ENV=test rake db:migrate'
+alias rdbdt='RAILS_ENV=test rake db:drop'
+alias rdbct='RAILS_ENV=test rake db:create'
 
 # Spring based rails stuff
 alias srgm='spring rails g migration'
 alias srgmo='spring rails g model'
 alias srgc='spring rails g controller'
 alias srgs='spring rails g scaffold'
+alias srdm='spring rails d migration'
+alias srdmo='spring rails d model'
+alias srdc='spring rails d controller'
+alias srds='spring rails d scaffold'
+
+# rake db ops
 alias srdbm='spring rake db:migrate'
+alias srdbd='spring rake db:drop'
+alias srdbc='spring rake db:create'
 alias srdbmt='RAILS_ENV=test spring rake db:migrate'
+alias srdbdt='RAILS_ENV=test spring rake db:drop'
+alias srdbct='RAILS_ENV=test spring rake db:create'
 
 alias aslv="grep 'Version:' asl-* -R 2>/dev/null|grep DEBIAN|tr -s '/' ':'|cut -d':' -f1,5|column -t"
 
