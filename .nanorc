@@ -1,3 +1,10 @@
+set autoindent
+set nowrap
+set const
+set smarthome
+set tabsize 2
+set tabstospaces
+
 ## HTML
 include "~/.nano/html.nanorc"
 
