@@ -1,5 +1,17 @@
+alias e="nano"
+
+alias acp="apt-cache policy"
+
+
+alias hax="autojump"
+alias bex="bundle exec"
+
+alias frdpg="fakeroot dpkg-git -b"
+alias frebb="fakeroot dpkg-git -b"
+
 alias c="cd"
-alias l="ls -lah"
+alias l="ls -lh"
+alias la="ls -lah"
 alias ll="ls -lh"
 alias s="sudo"
 
@@ -17,6 +29,7 @@ alias gpa="git push --all"
 
 alias dgb="dpkg-git -b"
 alias lspkg="dpkg -l"
+alias pkgls="dpkg-query -L "
 
 alias gtfo="sudo shutdown -h now"
 alias reboot="sudo reboot"
@@ -29,7 +42,7 @@ alias df="df -h"
 
 alias wfs="python -m SimpleHTTPServer 8888"
 alias e="$EDITOR"
-alias st="sublimetext2"
+alias st="subl"
 alias sanscom="grep -Pv '^#'"
 
 # Non spring based rails stuff
@@ -71,3 +84,70 @@ alias srdbct='RAILS_ENV=test spring rake db:create'
 alias aslv="grep 'Version:' asl-* -R 2>/dev/null|grep DEBIAN|tr -s '/' ':'|cut -d':' -f1,5|column -t"
 
 alias scroff="sleep 1 && xset dpms force off"
+
+# Aptly
+#alias ara="aptly repo add --force-replace"
+#alias apu="aptly publish update --skip-signing --force-overwrite"
+
+
+
+# Vagrant
+alias vgi="vagrant init"
+
+alias vup="vagrant up"
+alias vd="vagrant destroy"
+alias vdf="vagrant destroy -f"
+
+alias vssh="vagrant ssh"
+alias vrdp="vagrant rdp"
+
+alias vh="vagrant halt"
+alias vssp="vagrant suspend"
+alias vst="vagrant status"
+alias vre="vagrant resume"
+
+alias vpr="vagrant provision"
+alias vr="vagrant reload"
+alias vrp="vagrant reload --provision"
+
+alias vp="vagrant push"
+alias vsh="vagrant share"
+
+alias vba="vagrant box add"
+alias vbr="vagrant box remove"
+alias vbl="vagrant box list"
+alias vbo="vagrant box outdated"
+alias vbu="vagrant box update"
+
+alias vpli="vagrant plugin install"
+alias vpll="vagrant plugin list"
+alias vplun="vagrant plugin uninstall"
+alias vplu="vagrant plugin update"
+
+
+
+
+alias y='echo -n "\nHA! NOOB!\n\n"'
+
+
+#alias logvars="grep -P 'loggedvar|dblogvar' "
+
+
+
+#alias goset="source \`goenv\`"
+
+
+alias piu="netstat -tulpna | grep "
+
+
+
+
+alias scs="sudo systemctl start"
+alias scr="sudo systemctl restart"
+alias sct="sudo systemctl status"
+alias scx="sudo systemctl stop"
+alias sce="sudo systemctl enable"
+alias scd="sudo systemctl disable"
+
+
+alias gst="git status|head -1 &&  git status -s"
