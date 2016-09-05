@@ -1,3 +1,12 @@
+# scans the given network for live hosts
+function scan {
+  fping -ag $1 2>/dev/null
+}
+
+function lsnet {
+  scan $1
+}
+
 # Gives some chopped down CPU info
 function cpuinfo {
   cat /proc/cpuinfo|grep -P 'processor|MHz|model name|cache size'|sed 's/processor/\nprocessor/'
@@ -12,27 +21,6 @@ svc() {
   sudo service $*;
 }
 
-hax() {
-
-  goto="$HOME/src"
-
-  if [ "$1" = "" ]; then
-    cd "$goto";
-    return;
-  fi;
-
-  if [ "$2" ]; then
-    goto="$goto/$2";
-  fi;
-
-  cd `find "$goto" -maxdepth 1 -name "*${1}*" -type d|sort|head -1`;
-}
-
-haxd() {
-
-  hax $1 debs
-
-}
 
 # Shows all the SSH connections both out (ssh) and in (sshd)
 where() {
@@ -98,6 +86,54 @@ function logit() {
 
 
 epoch() {
-  [ "$1" ] && date -d @$1 && return 0;
-  date +%s
+  [[ -z "$1" ]] && date +%s && return 0;
+
+  if [[ "$1" =~ '^[0-9]+$' ]]; then
+    echo "$1" | ruby -pne '$_ = Time.at($_.to_i)'
+    echo ""
+  else
+    echo $1 | ruby -rtime -pne '$_ = Time.parse($_).to_i'
+    echo ""
+  fi
+}
+
+
+qr() {
+  qrencode  -s 10 -t PNG -o - "$1" | display
+}
+
+
+
+ctrlp() {
+  dir="$(find -type d|grep -vP '^\./\..*'| grep -v node_modules|fzf)";
+  [[ -d "$dir" ]] && cd $dir;
+  zle reset-prompt  
+}
+
+zle -N ctrlp
+bindkey "^p" ctrlp
+
+
+
+
+jcat() {
+  cat $1 | json_pp
+}
+
+jless() {
+  cat $1 | json_pp | less
+}
+
+zless() {
+  zcat $1 | less
+}
+
+zgrep() {
+  zcat $1 | grep "$@"
+}
+
+
+dbpath() {
+  [[ -L /data ]] && sudo unlink /data;
+  sudo ln -s "$(readlink -f $1)" /data;
 }
