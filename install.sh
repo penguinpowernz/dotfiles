@@ -22,5 +22,6 @@ echo "Installing..."
 rsync -ra $FROM/ $HOME --exclude=".git" --exclude="README.md" --exclude="install.sh" --exclude=".gitmodules";
 
 # Install vundle
-echo "Installing Vundle..."
-vim +BundleInstall +qall
+#echo "Installing VIM Vundle..."
+#vim +BundleInstall +qall
+
