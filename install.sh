@@ -21,6 +21,10 @@ git submodule update --init
 echo "Installing..."
 rsync -ra $FROM/ $HOME --exclude=".git" --exclude="README.md" --exclude="install.sh" --exclude=".gitmodules";
 
+echo "Installing packages..."
+sudo apt-get update
+sudo apt-get install $(cat packages|grep -Pv '^\s?#|^$'|tr -s '\n' ' ')
+
 # Install vundle
 #echo "Installing VIM Vundle..."
 #vim +BundleInstall +qall

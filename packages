@@ -1,0 +1,8 @@
+build-essential
+tmux screen autojump
+git git-core meld git-cola
+net-tools dnsutils nmap tcpdump fping
+nano vim mousepad
+x11vnc vinagre
+sqlite3 redis-server
+chromium-browser curl irssi
