@@ -151,3 +151,12 @@ alias scd="sudo systemctl disable"
 
 
 alias gst="git status|head -1 &&  git status -s"
+
+
+alias drrm="docker run -it --rm "
+alias drm="docker rm "
+alias db="docker build"
+alias drmi="docker rmi "
+alias dls="docker images"
+alias dlsc="docker ps"
+
