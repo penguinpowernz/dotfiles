@@ -53,6 +53,7 @@ export PATH=$PATH:$HOME/bin:/sbin:/usr/sbin
 
 # Custom stuff
 source ~/.functions
+[[ -f /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 source ~/.aliases
 
 # RVM stuff
