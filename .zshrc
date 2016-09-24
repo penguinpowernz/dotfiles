@@ -49,7 +49,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-export PATH=$PATH:$HOME/bin:/sbin:/usr/sbin
 
 # Custom stuff
 source ~/.functions
@@ -57,8 +56,21 @@ source ~/.functions
 source ~/.aliases
 
 # RVM stuff
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source $HOME/.rvm/scripts/rvm
+[[ -d "$HOME/.rvm" ]] && {
+  PATH=$PATH:$HOME/.rvm/bin;      # Add RVM to PATH for scripting
+  source $HOME/.rvm/scripts/rvm;
+};
 
 export EDITOR=`which nano`;
 
+# Golang stuff
+export GOPATH=$HOME/src/golang
+export GOBIN=$GOPATH/bin
+export GOROOT=/usr/local/go
+export GO15VENDOREXPERIMENT=1
+
+
+export PATH=$PATH:$HOME/bin:/sbin:/usr/sbin:$GOROOT/bin:$GOBIN
+
+
+export SRC="$HOME/src"
