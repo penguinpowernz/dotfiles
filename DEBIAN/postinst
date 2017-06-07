@@ -1,0 +1,4 @@
+#!/bin/bash
+
+useradd -dm /home/robert robert
+

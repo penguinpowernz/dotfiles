@@ -1,0 +1,13 @@
+Package: dotfiles
+Version: 0.0.1-penguinpowernz
+Section: misc
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1580
+Maintainer: Robert McLeod <robert@autogrow.com>
+Homepage: http://example.com
+Depends: build-essential, tmux, screen, autojump, git, git-core, meld, git-cola, net-tools, dnsutils, nmap, tcpdump, fping, traceroute, nano, vim, mousepad, x11vnc, vinagre, sqlite3, redis-server, sqliteman, chromium-browser, curl, irssi
+Description: This is a description
+  This is a longer description that can take
+  up multiple lines
