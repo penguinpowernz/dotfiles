@@ -6,3 +6,5 @@ id -u $USER || useradd -md /home/$USER $USER
 usermod -aG docker $USER
 usermod -aG sudo $USER
 usermod -s /usr/bin/zsh $USER
+
+exit 0;
