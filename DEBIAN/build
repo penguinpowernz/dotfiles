@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+pkgs = File.read("packages")
+pkgs = pkgs.lines.reject { |l| l.start_with?("#") }
+pkgs = pkgs.map { |l| l.split(" ") }
+pkgs = pkgs.flatten.join(", ")
+
+ctrl = File.read("DEBIAN/control").lines.map {|l| l.chomp }
+depends_line = nil
+ctrl.each_with_index { |l, i| depends_line = i if l.include?("Depends: ") }
+
+if depends_line.nil?
+  abort "no existing Depends line in control file"
+end
+
+ctrl[depends_line] = "Depends: %s" % pkgs
+File.write("DEBIAN/control", ctrl.join("\n"))

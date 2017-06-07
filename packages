@@ -1,8 +1,19 @@
+# dev tools
 build-essential
 tmux screen autojump
 git git-core meld git-cola
-net-tools dnsutils nmap tcpdump fping
+
+# network tools
+net-tools dnsutils nmap tcpdump fping traceroute
+
+# editors
 nano vim mousepad
+
+# vnc shit
 x11vnc vinagre
-sqlite3 redis-server
+
+# database stuffs
+sqlite3 redis-server sqliteman
+
+
 chromium-browser curl irssi
